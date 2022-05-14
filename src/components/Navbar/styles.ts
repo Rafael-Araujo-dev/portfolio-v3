@@ -7,7 +7,7 @@ export const Container = styled.nav`
     border-bottom: 1px rgba(0,0,0,0.2) solid;
     box-shadow: 0px 0px 10px -5px #000000;
     position: fixed;
-    width: 100%;
+    width: 90%;
 `
 
 const LogoAnimation = keyframes`
@@ -173,6 +173,9 @@ export const Desk = styled.div`
 export const Mobile = styled.div`
     display: flex;
     justify-content: space-between;
+    @media (min-width: 768px) {
+        display: none;
+    }
 `
 
 export const NavToggle = styled.div`  
@@ -182,7 +185,7 @@ export const NavToggle = styled.div`
     position: fixed;
     right: 20px;
     transform: translateY(10px);
-    z-index: 2;
+    z-index: 100;
     & span:after,
     & span:before {
         content: "";
@@ -225,5 +228,64 @@ export const NavToggle = styled.div`
     }
     @media (min-width: 769px) {
         display: none;
+    }
+`
+
+
+export const NavContainer = styled.div`
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+    transition-property: opacity;
+    transition-duration: 200ms;
+    &.off {
+        z-index: 0;
+        opacity: 0;
+
+        ul {
+            transform: translateX(100%);
+        }
+    }
+    &.on {
+        z-index: 99;
+        opacity: 1;
+
+        ul {
+            transform: translateX(0%);
+        }
+    }
+    span {
+        position: fixed;
+        background-color: red;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0,0,0,0.25);
+    }
+
+    ul {
+        z-index: 100;
+        background-color: ${colors.neutral100};
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        right: 0;
+        padding: 80px 20px 40px 40px;
+        text-align: right;
+        display: flex;
+        row-gap: 30px;
+        height: 100%;
+        max-height: calc(100vh - 120px);
+        overflow: auto;
+        transition-property: transform;
+        transition-duration: 200ms;
+        li, a {
+            color: ${colors.neutral900};
+            font-size: ${typography.title3.fontSize};
+        }
+        li:hover {
+            text-decoration: underline;
+        }
     }
 `
