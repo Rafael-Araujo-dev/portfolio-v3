@@ -5,7 +5,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Component {...pageProps} />
-      <GlobalStyled />
+      <GlobalStyled bgColor="#F3F3F3" />
     </>
   );
 }
