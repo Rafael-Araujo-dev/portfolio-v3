@@ -1,5 +1,9 @@
 import type { NextPage } from "next";
+import Image from "next/image";
 import { useState } from "react";
+
+import { useLanguageState } from "@context/language";
+import { useThemeState } from "@context/theme";
 
 import {
   Container,
@@ -8,14 +12,52 @@ import {
   Logo,
   NavToggle,
   NavContainer,
+  Controller,
 } from "./styles";
 
 const Navbar: NextPage = () => {
   const [isNavActive, setIsNavActive] = useState(false);
+  const [language, setLanguage] = useLanguageState();
+  const [theme, setTheme] = useThemeState();
   return (
-    <Container>
-      <Desk>
-        <Logo />
+    <Container theme={theme}>
+      <Controller theme={theme}>
+        <button
+          onClick={() => {
+            theme == "Light" ? setTheme("Dark") : setTheme("Light");
+          }}
+        >
+          <Image
+            src={
+              theme == "Light"
+                ? "/components/navbar/sun-dark.svg"
+                : "/components/navbar/moon-light.svg"
+            }
+            width={20}
+            height={20}
+          />
+          {theme}
+        </button>
+        |
+        <button
+          onClick={() => {
+            language == "PT" ? setLanguage("EN") : setLanguage("PT");
+          }}
+        >
+          <Image
+            src={
+              theme == "Light"
+                ? "/components/navbar/earth-dark.svg"
+                : "/components/navbar/earth-light.svg"
+            }
+            width={20}
+            height={20}
+          />
+          {language}
+        </button>
+      </Controller>
+      <Desk theme={theme}>
+        <Logo theme={theme} />
         <ul>
           <li>
             <a href="#Home">Home</a>
@@ -35,15 +77,16 @@ const Navbar: NextPage = () => {
         </ul>
       </Desk>
       <Mobile>
-        <Logo />
+        <Logo theme={theme} />
         <NavToggle
+          theme={theme}
           className={isNavActive ? "on" : ""}
           onClick={() => setIsNavActive(!isNavActive)}
         >
           <span />
         </NavToggle>
-        <NavContainer className={isNavActive ? "on" : "off"}>
-          <span onClick={() => setIsNavActive(!isNavActive)} />
+        <NavContainer theme={theme} className={isNavActive ? "on" : "off"}>
+          <span onClick={() => isNavActive && setIsNavActive(false)} />
           <ul>
             <li>
               <a href="#Home">Home</a>
