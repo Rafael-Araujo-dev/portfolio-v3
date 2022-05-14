@@ -1,0 +1,92 @@
+{
+    "display1": {
+      "fontSize": "4.768rem",
+      "lineHeight": "5rem",
+      "fontWeight": {
+        "normal": "300",
+        "strong": "700",
+        "heavy": "900"
+      }
+    },
+    "display2": {
+      "fontSize": "3.815rem",
+      "lineHeight": "5rem",
+      "fontWeight": {
+        "normal": "400",
+        "strong": "700",
+        "heavy": "800"
+      }
+    },
+    "title1": {
+      "fontSize": "3.052rem",
+      "lineHeight": "4rem",
+      "fontWeight": {
+        "normal": "400",
+        "strong": "700",
+        "heavy": "800"
+      }
+    },
+    "title2": {
+      "fontSize": "2.441rem",
+      "lineHeight": "3.75rem",
+      "fontWeight": {
+        "normal": "400",
+        "strong": "700",
+        "heavy": "800"
+      }
+    },
+    "title3": {
+      "fontSize": "1.953rem",
+      "lineHeight": "3.25rem",
+      "fontWeight": {
+        "normal": "400",
+        "strong": "700",
+        "heavy": "800"
+      }
+    },
+    "title4": {
+      "fontSize": "1.563rem",
+      "lineHeight": "2.5rem",
+      "fontWeight": {
+        "normal": "400",
+        "strong": "700",
+        "heavy": "800"
+      }
+    },
+    "title5": {
+      "fontSize": "1.25rem",
+      "lineHeight": "2rem",
+      "fontWeight": {
+        "normal": "400",
+        "strong": "700",
+        "heavy": "800"
+      }
+    },
+    "paragraph1": {
+      "fontSize": "1.125rem",
+      "lineHeight": "2.25rem",
+      "fontWeight": {
+        "light": "300",
+        "normal": "400",
+        "strong": "700"
+      }
+    },
+    "paragraph2": {
+      "fontSize": "1rem",
+      "lineHeight": "2rem",
+      "fontWeight": {
+        "light": "300",
+        "normal": "400",
+        "strong": "700"
+      }
+    },
+    "captions": {
+      "fontSize": "0.8rem",
+      "lineHeight": "1.25rem",
+      "fontWeight": {
+        "light": "300",
+        "normal": "400",
+        "strong": "700"
+      }
+    }
+  }
