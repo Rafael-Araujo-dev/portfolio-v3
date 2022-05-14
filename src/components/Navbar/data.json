@@ -1,0 +1,50 @@
+{
+    "EN": {
+        "menu": [
+            {
+                "name": "Home",
+                "link": "#Home"
+            },
+            {
+                "name": "Projects",
+                "link": "#Projects"
+            },
+            {
+                "name": "About",
+                "link": "#About"
+            },
+            {
+                "name": "Playground",
+                "link": "#Playground"
+            },
+            {
+                "name": "Contact",
+                "link": "#Contact"
+            }
+        ]
+    },
+    "PT": {
+        "menu": [
+            {
+                "name": "Home",
+                "link": "#Home"
+            },
+            {
+                "name": "Projetos",
+                "link": "#Projects"
+            },
+            {
+                "name": "Sobre",
+                "link": "#About"
+            },
+            {
+                "name": "Playground",
+                "link": "#Playground"
+            },
+            {
+                "name": "Contato",
+                "link": "#Contact"
+            }
+        ]
+    }
+}
