@@ -57,6 +57,10 @@ const GlobalStyled = createGlobalStyle`
     html { 
         scroll-behavior: smooth;
     }
+
+    a {
+        text-decoration: none;
+    }
 `
 
 export default GlobalStyled;
