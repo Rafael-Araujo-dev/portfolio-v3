@@ -60,6 +60,10 @@ const GlobalStyled = createGlobalStyle<{bgColor: string}>`
         transition-property: background;
         transition-duration: 250ms;
     }
+
+    a {
+        text-decoration: none;
+    }
 `
 
 export default GlobalStyled;
