@@ -5,7 +5,7 @@ import { createGlobalStyle } from "styled-components";
    License: none (public domain)
 */
 
-const GlobalStyled = createGlobalStyle<{bgColor: string}>`
+const GlobalStyled = createGlobalStyle`
     html, body, div, span, applet, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,
     a, abbr, acronym, address, big, cite, code,
@@ -56,9 +56,6 @@ const GlobalStyled = createGlobalStyle<{bgColor: string}>`
 
     html { 
         scroll-behavior: smooth;
-        background-color: ${props => props.bgColor};
-        transition-property: background;
-        transition-duration: 250ms;
     }
 
     a {
