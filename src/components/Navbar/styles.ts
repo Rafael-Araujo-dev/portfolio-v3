@@ -1,8 +1,13 @@
 import styled, { keyframes } from "styled-components";
 import typography from "@styles/typography.json";
+import colors from "@styles/colors.json";
 
 export const Container = styled.nav`
-
+    padding: 0 5%;
+    border-bottom: 1px rgba(0,0,0,0.2) solid;
+    box-shadow: 0px 0px 10px -5px #000000;
+    position: fixed;
+    width: 100%;
 `
 
 const LogoAnimation = keyframes`
@@ -118,7 +123,8 @@ const CursorAnimation = keyframes`
 export const Logo = styled.div`
     font-family: "Inter", sans-serif;
     font-size: ${typography.title3.fontSize};
-    font-weight: 500;
+    font-weight: ${typography.title3.fontWeight.medium};
+    color: ${colors.neutral900};
     line-height: ${typography.title3.lineHeight};
     &:before {
         animation: ${LogoAnimation} 10s ease infinite;
@@ -129,5 +135,95 @@ export const Logo = styled.div`
         font-weight: 400;
         font-size: ${typography.title4.fontSize};
         animation: ${CursorAnimation} .5s ease-in-out infinite alternate;
+    }
+`
+
+export const Desk = styled.div`
+    @media (max-width: 767px) {
+        display: none;
+    }
+    max-width: 1240px;
+    margin: auto;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+        font-family: "DM Sans", sans-serif;
+        display: flex;
+        column-gap: 30px;
+        font-size: ${typography.title5.fontSize};
+        font-weight: ${typography.title5.fontWeight.medium};
+        line-height: ${typography.title5.lineHeight};
+
+        li, a {
+            cursor: pointer;
+            color: ${colors.neutral900};
+            border-bottom: 2px solid transparent;
+            transition: border .2s;
+        }
+
+        li:hover {
+            border-bottom: 2px solid #000;
+        }
+    }
+`
+
+export const Mobile = styled.div`
+    display: flex;
+    justify-content: space-between;
+`
+
+export const NavToggle = styled.div`  
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    transform: translateY(10px);
+    z-index: 2;
+    & span:after,
+    & span:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -9px;
+    }
+    & span:after{
+        top: 9px;
+    }
+    & span {
+        position: relative;
+        display: block;
+        top: 15px;
+        
+    }
+    & span,
+    & span:after,
+    & span:before {
+        width: 100%;
+        height: 3px;
+        background-color: ${colors.black};
+        transition: all 0.3s;
+        backface-visibility: hidden;
+        border-radius: 2px;
+    }
+    &.on span {
+        background-color: transparent;
+        transform: translateY(0);
+    }
+    &.on span:before {
+        transform: rotate(45deg) translate(7px, 6px);
+    }
+    &.on span:after {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+    &.on + #menu {
+        opacity: 1;
+        visibility: visible;
+    }
+    @media (min-width: 769px) {
+        display: none;
     }
 `
