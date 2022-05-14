@@ -45,7 +45,7 @@ class MyDocument extends Document {
 
             <meta name="description" content="" />
             
-            <link rel="shortcut icon" href="/favicon.ico" />
+            <link rel="shortcut icon" href="/logotype.ico" />
         </Head>
         <body>
           <Main />
