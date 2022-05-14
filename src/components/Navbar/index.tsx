@@ -15,10 +15,19 @@ import {
   Controller,
 } from "./styles";
 
+import data from "./data.json";
+
 const Navbar: NextPage = () => {
   const [isNavActive, setIsNavActive] = useState(false);
   const [language, setLanguage] = useLanguageState();
   const [theme, setTheme] = useThemeState();
+
+  const dataObj: {
+    [key: string]: {
+      menu: Array<Object>;
+    };
+  } = data;
+
   return (
     <Container theme={theme}>
       <Controller theme={theme}>
@@ -59,21 +68,15 @@ const Navbar: NextPage = () => {
       <Desk theme={theme}>
         <Logo theme={theme} />
         <ul>
-          <li>
-            <a href="#Home">Home</a>
-          </li>
-          <li>
-            <a href="#Projects">Projetos</a>
-          </li>
-          <li>
-            <a href="#About">Sobre</a>
-          </li>
-          <li>
-            <a href="#Playground">Playground</a>
-          </li>
-          <li>
-            <a href="#Contact">Contato</a>
-          </li>
+          {dataObj[language].menu.map(
+            (item: { name?: string; link?: string }, index: number) => {
+              return (
+                <li key={index}>
+                  <a href={item.link}>{item.name}</a>
+                </li>
+              );
+            }
+          )}
         </ul>
       </Desk>
       <Mobile>
@@ -88,21 +91,15 @@ const Navbar: NextPage = () => {
         <NavContainer theme={theme} className={isNavActive ? "on" : "off"}>
           <span onClick={() => isNavActive && setIsNavActive(false)} />
           <ul>
-            <li>
-              <a href="#Home">Home</a>
-            </li>
-            <li>
-              <a href="#Projects">Projetos</a>
-            </li>
-            <li>
-              <a href="#About">Sobre</a>
-            </li>
-            <li>
-              <a href="#Playground">Playground</a>
-            </li>
-            <li>
-              <a href="#Contact">Contato</a>
-            </li>
+            {dataObj[language].menu.map(
+              (item: { name?: string; link?: string }, index: number) => {
+                return (
+                  <li key={index}>
+                    <a href={item.link}>{item.name}</a>
+                  </li>
+                );
+              }
+            )}
           </ul>
         </NavContainer>
       </Mobile>
