@@ -17,10 +17,10 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] Navbar
 - [x] Hero
 - [x] Footer
-- [ ] Seção de Projetos
+- [x] Seção de Projetos
 - [ ] Página Sobre
 - [ ] Seção de Contato
-- [x] Página Playground 
+- [ ] Página Playground 
 
 ## 💻 Pré-requisitos
 
