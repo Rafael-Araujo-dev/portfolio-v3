@@ -33,7 +33,7 @@ const props: Properties = {
     navbar: [
       {
         name: "Home",
-        link: "#Home",
+        link: "#home",
       },
       {
         name: "Projects",
@@ -114,7 +114,7 @@ const props: Properties = {
     navbar: [
       {
         name: "Home",
-        link: "#Home",
+        link: "#home",
       },
       {
         name: "Projetos",

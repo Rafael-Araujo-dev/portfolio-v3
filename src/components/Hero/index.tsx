@@ -17,7 +17,7 @@ const Hero: NextPage<Properties> = ({ props }) => {
   const [theme, setTheme] = useThemeState();
 
   return (
-    <Container theme={theme}>
+    <Container theme={theme} id="home">
       <Wrapper theme={theme}>
         <div data-aos="fade-up">{props.title}</div>
         <div data-aos="fade-up">{props.description}</div>
