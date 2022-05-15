@@ -33,7 +33,7 @@ const Projects: NextPage<Properties> = ({ props, id }) => {
 
   return (
     <Container theme={theme}>
-      <Wrapper>
+      <Wrapper data-aos="fade-up">
         <div>
           <div>
             <Title>
