@@ -262,22 +262,31 @@ export const NavContainer = styled.div<{theme?: string}>`
     height: 100%;
     width: 100%;
     z-index: 99;
-    transition-property: opacity;
+    transition-property: opacity, transform;
     transition-duration: 200ms;
     &.off {
         z-index: -1;
         opacity: 0;
+        transform: translateX(100%);
+        transition-delay: 250ms;
         ul {
             transform: translateX(100%);
+        }
+        span {
+            opacity: 0;
+            transition-delay: 0ms;
         }
     }
     &.on {
         z-index: 99;
         opacity: 1;
-
+        span {
+            opacity: 1;
+        }
         ul {
             transform: translateX(0%);
         }
+        transform: translateX(0%);
     }
     span {
         position: fixed;
@@ -285,6 +294,9 @@ export const NavContainer = styled.div<{theme?: string}>`
         height: 100%;
         width: 100%;
         background-color: rgba(0,0,0,0.25);
+        transition-property: opacity;
+        transition-delay: 250ms;
+        transition-duration: 250ms;
     }
 
     ul {
