@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Image from "next/image";
 import { useLanguageState } from "@context/language";
 import { useThemeState } from "@context/theme";
 
@@ -32,30 +33,36 @@ const Projects: NextPage<Properties> = ({ props, id }) => {
   const [theme, setTheme] = useThemeState();
 
   return (
-    <Container theme={theme} id={"#project-" + (id + 1)}>
+    <Container theme={theme}>
       <Wrapper data-aos="fade-up">
         <div>
           <div>
             <Title>
               {id + 1 < 10 ? "0" + (id + 1) : id + 1} / {props.title}
             </Title>
-            <Thumbnail
+            <Image
               src={props.thumbnail}
               alt="Foto do projeto"
               width={"100%"}
+              height={"100%"}
+              layout={"responsive"}
+              quality={100}
             />
             <Description>{props.description}</Description>
             <Technologies>{props.technologies}</Technologies>
           </div>
-          <MoreAbout href={props.moreAbout.link} tabIndex={7 + id}>
+          <MoreAbout href={props.moreAbout.link} tabIndex={0}>
             {props.moreAbout.text}
           </MoreAbout>
         </div>
         <div>
-          <Thumbnail
+          <Image
             src={props.thumbnail}
             alt={"Foto do projeto " + props.title}
             width={"100%"}
+            height={"100%"}
+            layout={"responsive"}
+            quality={100}
           />
         </div>
       </Wrapper>

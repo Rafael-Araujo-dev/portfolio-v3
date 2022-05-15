@@ -11,12 +11,18 @@ export const Container = styled.section<{theme?: string}>`
     transition-duration: 250ms;
     transition-property: background, color;
     padding: 20px 5%;
-
     color: ${props =>
         props.theme == "Light" && colors.neutral800
         ||
         props.theme == "Dark" && colors.neutral100
     };
+    
+    padding: 40px 5% 20px 5%;
+
+    @media (min-width: 768px) {
+        padding: 110px 5% 0 5%;
+        & > section { padding: 20px 5% 10px 5%; }
+    }
 
     a {
         color: ${props =>
@@ -47,23 +53,35 @@ export const Wrapper = styled.div`
             flex-direction: column;
         }
 
-        img {
-            margin-bottom: 10px;
+        span {
+            margin-bottom: 10px !important;
+            max-width: 100% !important;
+            max-height: 230px !important;
         }
     }
     & > div:last-child {
         flex: 0.55;
 
         @media (max-width: 767px) {
-            img { display: none;}    
+            span { 
+                display: none !important; 
+            }    
         }
+
+        span {
+            margin-bottom: 10px !important;
+            max-width: 640px !important;
+            max-height: 364px !important;
+         }
     }
     
     @media (min-width: 768px) {
         flex-direction: row;
 
         & > div:first-child {
-            img { display: none; }
+            span { 
+                display: none !important; 
+            }
         }
     }
 `

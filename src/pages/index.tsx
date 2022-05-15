@@ -7,7 +7,7 @@ import { useLanguageState } from "@context/language";
 //Components
 import Navbar from "@components/Navbar";
 import Hero from "@components/Hero";
-import Project from "@components/Project";
+import Projects from "@components/Projects";
 import Footer from "@components/Footer";
 
 interface Properties {
@@ -33,11 +33,11 @@ const props: Properties = {
     navbar: [
       {
         name: "Home",
-        link: "#Home",
+        link: "#home",
       },
       {
         name: "Projects",
-        link: "#project-1",
+        link: "#projects",
       },
       {
         name: "About",
@@ -98,7 +98,7 @@ const props: Properties = {
     footer: [
       {
         name: "Projects",
-        link: "#project-1",
+        link: "#projects",
       },
       {
         name: "LinkedIn",
@@ -114,11 +114,11 @@ const props: Properties = {
     navbar: [
       {
         name: "Home",
-        link: "#Home",
+        link: "#home",
       },
       {
         name: "Projetos",
-        link: "#project-1",
+        link: "#projects",
       },
       {
         name: "Sobre",
@@ -179,7 +179,7 @@ const props: Properties = {
     footer: [
       {
         name: "Projetos",
-        link: "#project-1",
+        link: "#projects",
       },
       {
         name: "LinkedIn",
@@ -209,9 +209,7 @@ const Home: NextPage = () => {
       <Hero props={props[language].hero} />
 
       <main>
-        {props[language].projects.map((project, index: number) => {
-          return <Project key={index} props={project} id={index} />;
-        })}
+        <Projects props={props[language].projects} />
       </main>
 
       <Footer props={props[language].footer} />
