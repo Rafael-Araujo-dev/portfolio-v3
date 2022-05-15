@@ -15,6 +15,7 @@ export const Container = styled.nav<{theme?: string}>`
     };
     transition-duration: 250ms;
     transition-property: background;
+    z-index: 100;
 `
 
 const LogoAnimation = keyframes`
