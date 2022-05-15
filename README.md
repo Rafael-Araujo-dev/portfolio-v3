@@ -3,7 +3,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/Rafael-Araujo-dev/portfolio-v3?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/Rafael-Araujo-dev/portfolio-v3?style=for-the-badge)
 
-![screencast-localhost_3000-2022 05 14-23_30_50](https://user-images.githubusercontent.com/90640158/168454673-e354387f-6f37-4406-9395-17a2dcb9e51f.gif)
+![screencast-localhost_3000-2022 05 15-01_18_57](https://user-images.githubusercontent.com/90640158/168457190-ba98cd16-b1e5-47e0-8986-2b7f3289e683.gif)
 
 > Projeto no ar: <a href="#">Portfolio</a>
 
@@ -16,7 +16,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] Dark mode & Light mode
 - [x] Navbar
 - [x] Hero
-- [ ] Footer
+- [x] Footer
 - [ ] Seção de Projetos
 - [ ] Página Sobre
 - [ ] Seção de Contato
