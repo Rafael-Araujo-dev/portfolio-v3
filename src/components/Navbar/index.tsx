@@ -31,7 +31,7 @@ const Navbar: NextPage<Properties> = ({ props }) => {
           onClick={() => {
             theme == "Light" ? setTheme("Dark") : setTheme("Light");
           }}
-          tabIndex={1}
+          tabIndex={0}
         >
           <Image
             src={
@@ -40,8 +40,9 @@ const Navbar: NextPage<Properties> = ({ props }) => {
                 : "/components/navbar/moon-light.svg"
             }
             alt={"Ícone de modo " + theme}
-            width={20}
-            height={20}
+            width={"20px"}
+            height={"20px"}
+            layout={"fixed"}
           />
           {theme}
         </button>
@@ -50,7 +51,7 @@ const Navbar: NextPage<Properties> = ({ props }) => {
           onClick={() => {
             language == "PT" ? setLanguage("EN") : setLanguage("PT");
           }}
-          tabIndex={2}
+          tabIndex={0}
         >
           <Image
             src={
@@ -59,8 +60,9 @@ const Navbar: NextPage<Properties> = ({ props }) => {
                 : "/components/navbar/earth-light.svg"
             }
             alt={"Ícone de idioma"}
-            width={20}
-            height={20}
+            width={"20px"}
+            height={"20px"}
+            layout={"fixed"}
           />
           {language}
         </button>
@@ -72,7 +74,7 @@ const Navbar: NextPage<Properties> = ({ props }) => {
             (item: { name?: string; link?: string }, index: number) => {
               return (
                 <li key={index}>
-                  <a href={item.link} tabIndex={3 + index}>
+                  <a href={item.link} tabIndex={0}>
                     {item.name}
                   </a>
                 </li>
@@ -97,7 +99,7 @@ const Navbar: NextPage<Properties> = ({ props }) => {
               (item: { name?: string; link?: string }, index: number) => {
                 return (
                   <li key={index}>
-                    <a href={item.link} tabIndex={3 + index}>
+                    <a href={item.link} tabIndex={index}>
                       {item.name}
                     </a>
                   </li>

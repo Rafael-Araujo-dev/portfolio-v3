@@ -53,23 +53,35 @@ export const Wrapper = styled.div`
             flex-direction: column;
         }
 
-        img {
-            margin-bottom: 10px;
+        span {
+            margin-bottom: 10px !important;
+            max-width: 100% !important;
+            max-height: 230px !important;
         }
     }
     & > div:last-child {
         flex: 0.55;
 
         @media (max-width: 767px) {
-            img { display: none;}    
+            span { 
+                display: none !important; 
+            }    
         }
+
+        span {
+            margin-bottom: 10px !important;
+            max-width: 640px !important;
+            max-height: 364px !important;
+         }
     }
     
     @media (min-width: 768px) {
         flex-direction: row;
 
         & > div:first-child {
-            img { display: none; }
+            span { 
+                display: none !important; 
+            }
         }
     }
 `
