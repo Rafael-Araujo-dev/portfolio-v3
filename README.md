@@ -16,9 +16,11 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] Dark mode & Light mode
 - [x] Navbar
 - [x] Hero
+- [ ] Footer
 - [ ] Seção de Projetos
 - [ ] Página Sobre
 - [ ] Seção de Contato
+- [x] Página Playground 
 
 ## 💻 Pré-requisitos
 
