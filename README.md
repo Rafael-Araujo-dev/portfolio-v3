@@ -7,6 +7,16 @@
 
 > Site no ar: <a href="https://www.orafaelribeiro.com/">Portfolio</a>
 
+# Relatório de desempenho 
+ - <a href="https://developers.google.com/web/tools/lighthouse" target="_blank">Google Lighthouse</a>
+![image](https://user-images.githubusercontent.com/90640158/168489611-28bf6e49-c0b9-4c5b-86c0-6ff7abc47151.png)
+
+ - <a href="https://gtmetrix.com/" target="_blank">GTmetrix</a>
+![image](https://user-images.githubusercontent.com/90640158/168489678-1f3569a8-6d3c-4fa3-b08f-4fcd8dd932b8.png)
+
+
+
+
 ### Ajustes e melhorias
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
