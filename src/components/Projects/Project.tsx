@@ -32,7 +32,7 @@ const Projects: NextPage<Properties> = ({ props, id }) => {
   const [theme, setTheme] = useThemeState();
 
   return (
-    <Container theme={theme} id={"#project-" + (id + 1)}>
+    <Container theme={theme}>
       <Wrapper data-aos="fade-up">
         <div>
           <div>
