@@ -99,7 +99,7 @@ const Navbar: NextPage<Properties> = ({ props }) => {
               (item: { name?: string; link?: string }, index: number) => {
                 return (
                   <li key={index}>
-                    <a href={item.link} tabIndex={index}>
+                    <a href={item.link} tabIndex={0}>
                       {item.name}
                     </a>
                   </li>
