@@ -1,0 +1,34 @@
+{
+    "EN": {
+        "footer": [
+            {
+                "name": "Projects",
+                "link": "#Projects"
+            },
+            {
+                "name": "LinkedIn",
+                "link": "#LinkedIn"
+            },
+            {
+                "name": "Curriculum",
+                "link": "#Curriculum"
+            }
+        ]
+    },
+    "PT": {
+        "footer": [
+            {
+                "name": "Projetos",
+                "link": "#Projects"
+            },
+            {
+                "name": "LinkedIn",
+                "link": "#LinkedIn"
+            },
+            {
+                "name": "Curriculum",
+                "link": "#Curriculum"
+            }
+        ]
+    }
+}
