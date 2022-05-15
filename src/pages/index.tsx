@@ -2,12 +2,115 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
+import { useLanguageState } from "@context/language";
+
 //Components
 import Navbar from "@components/Navbar";
 import Hero from "@components/Hero";
+import Project from "@components/Project";
 import Footer from "@components/Footer";
 
+interface Properties {
+  [key: string]: {
+    projects: Array<{
+      thumbnail: string;
+      title: string;
+      description: string;
+      technologies: string;
+      moreAbout: {
+        text: string;
+        link: string;
+      };
+    }>;
+  };
+}
+
+const props: Properties = {
+  EN: {
+    projects: [
+      {
+        thumbnail: "https://source.unsplash.com/random/1920x1080?developer",
+        title: "Project Name",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        technologies:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        moreAbout: {
+          text: "See More",
+          link: "#SeeMore",
+        },
+      },
+      {
+        thumbnail: "https://source.unsplash.com/random/1920x1080?coding",
+        title: "Project Name",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        technologies:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        moreAbout: {
+          text: "See More",
+          link: "#SeeMore",
+        },
+      },
+      {
+        thumbnail: "https://source.unsplash.com/random/1920x1080?userinterface",
+        title: "Project Name",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        technologies:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        moreAbout: {
+          text: "See More",
+          link: "#SeeMore",
+        },
+      },
+    ],
+  },
+  PT: {
+    projects: [
+      {
+        thumbnail: "https://source.unsplash.com/random/1920x1080?developer",
+        title: "Nome do projeto",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        technologies:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        moreAbout: {
+          text: "Ver mais",
+          link: "#SeeMore",
+        },
+      },
+      {
+        thumbnail: "https://source.unsplash.com/random/1920x1080?coding",
+        title: "Nome do projeto",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        technologies:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        moreAbout: {
+          text: "Ver mais",
+          link: "#SeeMore",
+        },
+      },
+      {
+        thumbnail: "https://source.unsplash.com/random/1920x1080?userinterface",
+        title: "Nome do projeto",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        technologies:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        moreAbout: {
+          text: "Ver mais",
+          link: "#SeeMore",
+        },
+      },
+    ],
+  },
+};
+
 const Home: NextPage = () => {
+  const [language, setLanguage] = useLanguageState();
+
   return (
     <>
       <Head>
@@ -19,6 +122,12 @@ const Home: NextPage = () => {
       <Navbar />
 
       <Hero />
+
+      <main>
+        {props[language].projects.map((project, index: number) => {
+          return <Project key={index} props={project} id={index} />;
+        })}
+      </main>
 
       <Footer />
     </>
