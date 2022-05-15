@@ -37,7 +37,7 @@ const props: Properties = {
       },
       {
         name: "Projects",
-        link: "#Projects",
+        link: "#project-1",
       },
       {
         name: "About",
@@ -98,11 +98,11 @@ const props: Properties = {
     footer: [
       {
         name: "Projects",
-        link: "#Projects",
+        link: "#project-1",
       },
       {
         name: "LinkedIn",
-        link: "#LinkedIn",
+        link: "https://www.linkedin.com/in/rafael-ribeiro-araujo/",
       },
       {
         name: "Curriculum",
@@ -118,7 +118,7 @@ const props: Properties = {
       },
       {
         name: "Projetos",
-        link: "#Projects",
+        link: "#project-1",
       },
       {
         name: "Sobre",
@@ -179,11 +179,11 @@ const props: Properties = {
     footer: [
       {
         name: "Projetos",
-        link: "#Projects",
+        link: "#project-1",
       },
       {
         name: "LinkedIn",
-        link: "#LinkedIn",
+        link: "https://www.linkedin.com/in/rafael-ribeiro-araujo/",
       },
       {
         name: "Curriculum",

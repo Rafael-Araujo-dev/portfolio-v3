@@ -19,8 +19,8 @@ const Hero: NextPage<Properties> = ({ props }) => {
   return (
     <Container theme={theme}>
       <Wrapper theme={theme}>
-        <div data-aos="fade-right">{props.title}</div>
-        <div data-aos="fade-left">{props.description}</div>
+        <div data-aos="fade-up">{props.title}</div>
+        <div data-aos="fade-up">{props.description}</div>
       </Wrapper>
     </Container>
   );

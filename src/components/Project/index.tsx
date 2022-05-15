@@ -32,7 +32,7 @@ const Projects: NextPage<Properties> = ({ props, id }) => {
   const [theme, setTheme] = useThemeState();
 
   return (
-    <Container theme={theme}>
+    <Container theme={theme} id={"#project-" + (id + 1)}>
       <Wrapper data-aos="fade-up">
         <div>
           <div>
@@ -47,7 +47,7 @@ const Projects: NextPage<Properties> = ({ props, id }) => {
             <Description>{props.description}</Description>
             <Technologies>{props.technologies}</Technologies>
           </div>
-          <MoreAbout href={props.moreAbout.link}>
+          <MoreAbout href={props.moreAbout.link} tabIndex={7 + id}>
             {props.moreAbout.text}
           </MoreAbout>
         </div>
