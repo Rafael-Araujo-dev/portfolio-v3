@@ -5,6 +5,7 @@ import Head from "next/head";
 //Components
 import Navbar from "@components/Navbar";
 import Hero from "@components/Hero";
+import Footer from "@components/Footer";
 
 const Home: NextPage = () => {
   return (
@@ -18,6 +19,8 @@ const Home: NextPage = () => {
       <Navbar />
 
       <Hero />
+
+      <Footer />
     </>
   );
 };
