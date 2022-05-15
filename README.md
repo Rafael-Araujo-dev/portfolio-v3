@@ -3,7 +3,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/Rafael-Araujo-dev/portfolio-v3?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/Rafael-Araujo-dev/portfolio-v3?style=for-the-badge)
 
-![screencast-localhost_3000-2022 05 15-01_18_57](https://user-images.githubusercontent.com/90640158/168457190-ba98cd16-b1e5-47e0-8986-2b7f3289e683.gif)
+![screencast-localhost_3000-2022 05 15-03_00_39](https://user-images.githubusercontent.com/90640158/168459366-ec696ab0-fc6a-4975-b89c-380d0ff2b5b7.gif)
 
 > Projeto no ar: <a href="#">Portfolio</a>
 
