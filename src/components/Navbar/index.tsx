@@ -31,6 +31,7 @@ const Navbar: NextPage<Properties> = ({ props }) => {
           onClick={() => {
             theme == "Light" ? setTheme("Dark") : setTheme("Light");
           }}
+          tabIndex={1}
         >
           <Image
             src={
@@ -49,6 +50,7 @@ const Navbar: NextPage<Properties> = ({ props }) => {
           onClick={() => {
             language == "PT" ? setLanguage("EN") : setLanguage("PT");
           }}
+          tabIndex={2}
         >
           <Image
             src={
@@ -70,7 +72,9 @@ const Navbar: NextPage<Properties> = ({ props }) => {
             (item: { name?: string; link?: string }, index: number) => {
               return (
                 <li key={index}>
-                  <a href={item.link}>{item.name}</a>
+                  <a href={item.link} tabIndex={3 + index}>
+                    {item.name}
+                  </a>
                 </li>
               );
             }
@@ -93,7 +97,9 @@ const Navbar: NextPage<Properties> = ({ props }) => {
               (item: { name?: string; link?: string }, index: number) => {
                 return (
                   <li key={index}>
-                    <a href={item.link}>{item.name}</a>
+                    <a href={item.link} tabIndex={3 + index}>
+                      {item.name}
+                    </a>
                   </li>
                 );
               }
