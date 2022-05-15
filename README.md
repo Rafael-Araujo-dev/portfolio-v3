@@ -5,7 +5,7 @@
 
 ![screencast-localhost_3000-2022 05 14-23_30_50](https://user-images.githubusercontent.com/90640158/168454673-e354387f-6f37-4406-9395-17a2dcb9e51f.gif)
 
-> Projeto no ar: <a href="https://orafaelribeiro.com/">Portfolio</a>
+> Projeto no ar: <a href="#">Portfolio</a>
 
 ### Ajustes e melhorias
 
