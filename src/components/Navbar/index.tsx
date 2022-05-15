@@ -15,18 +15,14 @@ import {
   Controller,
 } from "./styles";
 
-import data from "./data.json";
+interface Properties {
+  props: Array<{ name: string; link: string }>;
+}
 
-const Navbar: NextPage = () => {
+const Navbar: NextPage<Properties> = ({ props }) => {
   const [isNavActive, setIsNavActive] = useState(false);
   const [language, setLanguage] = useLanguageState();
   const [theme, setTheme] = useThemeState();
-
-  const dataObj: {
-    [key: string]: {
-      menu: Array<Object>;
-    };
-  } = data;
 
   return (
     <Container theme={theme}>
@@ -42,6 +38,7 @@ const Navbar: NextPage = () => {
                 ? "/components/navbar/sun-dark.svg"
                 : "/components/navbar/moon-light.svg"
             }
+            alt={"Ícone de modo " + theme}
             width={20}
             height={20}
           />
@@ -59,6 +56,7 @@ const Navbar: NextPage = () => {
                 ? "/components/navbar/earth-dark.svg"
                 : "/components/navbar/earth-light.svg"
             }
+            alt={"Ícone de idioma"}
             width={20}
             height={20}
           />
@@ -68,7 +66,7 @@ const Navbar: NextPage = () => {
       <Desk theme={theme}>
         <Logo theme={theme} />
         <ul>
-          {dataObj[language].menu.map(
+          {props.map(
             (item: { name?: string; link?: string }, index: number) => {
               return (
                 <li key={index}>
@@ -91,7 +89,7 @@ const Navbar: NextPage = () => {
         <NavContainer theme={theme} className={isNavActive ? "on" : "off"}>
           <span onClick={() => isNavActive && setIsNavActive(false)} />
           <ul>
-            {dataObj[language].menu.map(
+            {props.map(
               (item: { name?: string; link?: string }, index: number) => {
                 return (
                   <li key={index}>

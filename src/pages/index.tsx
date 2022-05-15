@@ -12,6 +12,8 @@ import Footer from "@components/Footer";
 
 interface Properties {
   [key: string]: {
+    navbar: Array<{ name: string; link: string }>;
+    hero: { title: string; description: string };
     projects: Array<{
       thumbnail: string;
       title: string;
@@ -22,11 +24,39 @@ interface Properties {
         link: string;
       };
     }>;
+    footer: Array<{ name: string; link: string }>;
   };
 }
 
 const props: Properties = {
   EN: {
+    navbar: [
+      {
+        name: "Home",
+        link: "#Home",
+      },
+      {
+        name: "Projects",
+        link: "#Projects",
+      },
+      {
+        name: "About",
+        link: "#About",
+      },
+      {
+        name: "Playground",
+        link: "#Playground",
+      },
+      {
+        name: "Contact",
+        link: "#Contact",
+      },
+    ],
+    hero: {
+      title: "Hello, I'm Rafael Araujo.",
+      description:
+        "Front-End developer, student of technology, always looking for new challenges and to specialize in web development.",
+    },
     projects: [
       {
         thumbnail: "https://source.unsplash.com/random/1920x1080?developer",
@@ -65,8 +95,49 @@ const props: Properties = {
         },
       },
     ],
+    footer: [
+      {
+        name: "Projects",
+        link: "#Projects",
+      },
+      {
+        name: "LinkedIn",
+        link: "#LinkedIn",
+      },
+      {
+        name: "Curriculum",
+        link: "#Curriculum",
+      },
+    ],
   },
   PT: {
+    navbar: [
+      {
+        name: "Home",
+        link: "#Home",
+      },
+      {
+        name: "Projetos",
+        link: "#Projects",
+      },
+      {
+        name: "Sobre",
+        link: "#About",
+      },
+      {
+        name: "Playground",
+        link: "#Playground",
+      },
+      {
+        name: "Contato",
+        link: "#Contact",
+      },
+    ],
+    hero: {
+      title: "Olá, eu sou Rafael Araujo.",
+      description:
+        "Desenvolvedor Front-End, estudante de tecnologia, sempre buscando novos desafios e especializar-se em desenvolvimento web.",
+    },
     projects: [
       {
         thumbnail: "https://source.unsplash.com/random/1920x1080?developer",
@@ -103,6 +174,20 @@ const props: Properties = {
           text: "Ver mais",
           link: "#SeeMore",
         },
+      },
+    ],
+    footer: [
+      {
+        name: "Projetos",
+        link: "#Projects",
+      },
+      {
+        name: "LinkedIn",
+        link: "#LinkedIn",
+      },
+      {
+        name: "Curriculum",
+        link: "#Curriculum",
       },
     ],
   },
@@ -119,9 +204,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/logotype.ico" />
       </Head>
 
-      <Navbar />
+      <Navbar props={props[language].navbar} />
 
-      <Hero />
+      <Hero props={props[language].hero} />
 
       <main>
         {props[language].projects.map((project, index: number) => {
@@ -129,7 +214,7 @@ const Home: NextPage = () => {
         })}
       </main>
 
-      <Footer />
+      <Footer props={props[language].footer} />
     </>
   );
 };
