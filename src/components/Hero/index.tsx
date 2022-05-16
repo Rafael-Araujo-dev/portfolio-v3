@@ -3,7 +3,9 @@ import type { NextPage } from "next";
 import { useLanguageState } from "@context/language";
 import { useThemeState } from "@context/theme";
 
-import { Container, Wrapper } from "./styles";
+import { Container, Wrapper, Background } from "./styles";
+
+import BackgroundSVG from "./BackgroundSVG";
 
 interface Properties {
   props: {
@@ -17,11 +19,15 @@ const Hero: NextPage<Properties> = ({ props }) => {
   const [theme, setTheme] = useThemeState();
 
   return (
-    <Container theme={theme} id="home">
+    <Container id="home">
       <Wrapper theme={theme}>
-        <div>{props.title}</div>
-        <div>{props.description}</div>
+        <div data-aos="fade-right">{props.title}</div>
+        <div data-aos="fade-left">{props.description}</div>
       </Wrapper>
+
+      <Background theme={theme}>
+        <BackgroundSVG />
+      </Background>
     </Container>
   );
 };
