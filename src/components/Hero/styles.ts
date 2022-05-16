@@ -21,7 +21,7 @@ export const Background = styled.div<{theme?: string}>`
     left: 0;
     z-index:-1;
     margin-top: -20px;
-    height: 100%;
+    height: calc(100% + 20px);
     width: 100%;
     svg {
         width: 100%;
