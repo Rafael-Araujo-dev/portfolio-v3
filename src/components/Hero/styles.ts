@@ -17,11 +17,11 @@ padding: 60px 5% 0 5%;
 export const Background = styled.div<{theme?: string}>`
 
     background-size: cover;
-    position: absolute;
+    position: fixed;
     left: 0;
     z-index:-1;
-    margin-top: -20px;
-    height: calc(100% + 20px);
+    top: 0;
+    height: 100%;
     width: 100%;
     svg {
         width: 100%;
