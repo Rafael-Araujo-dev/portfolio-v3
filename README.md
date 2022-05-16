@@ -1,11 +1,16 @@
 # Portfolio v3
 
-![GitHub repo size](https://img.shields.io/github/repo-size/Rafael-Araujo-dev/portfolio-v3?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/Rafael-Araujo-dev/portfolio-v3?style=for-the-badge)
+![GitHub activity](https://img.shields.io/github/commit-activity/y/Rafael-Araujo-dev/portfolio-v3?style=for-the-badge)
+![GitHub top language](https://img.shields.io/github/languages/top/Rafael-Araujo-dev/portfolio-v3?style=for-the-badge)
+![NextJS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 
+![Website](https://img.shields.io/website?down_message=Offline&label=Website%20status&style=for-the-badge&up_message=Online&url=https%3A%2F%2Fwww.orafaelribeiro.com%2F)
 ![screencast-localhost_3000-2022 05 15-03_00_39](https://user-images.githubusercontent.com/90640158/168459366-ec696ab0-fc6a-4975-b89c-380d0ff2b5b7.gif)
 
-> Site no ar: <a href="https://www.orafaelribeiro.com/">Portfolio</a>
+> Link para o site no ar: <a href="https://www.orafaelribeiro.com/">Portfolio</a>
 
 # Relatório de desempenho 
  - <a href="https://developers.google.com/web/tools/lighthouse" target="_blank">Google Lighthouse</a>
