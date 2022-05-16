@@ -4,9 +4,9 @@ import typography from "@styles/typography.json";
 
 export const Container = styled.section<{theme?: string}>`
     background-color: ${props =>
-        props.theme == "Light" && colors.neutral100
+        props.theme == "Light" && colors.neutral200
         ||
-        props.theme == "Dark" && colors.neutral900
+        props.theme == "Dark" && colors.neutral850
     };
     transition-duration: 250ms;
     transition-property: background, color;
@@ -18,10 +18,10 @@ export const Container = styled.section<{theme?: string}>`
     };
     
     padding: 40px 5% 20px 5%;
-
+    & > section { padding: 20px 0 10px 0; }
     @media (min-width: 768px) {
-        padding: 110px 5% 0 5%;
-        & > section { padding: 20px 5% 10px 5%; }
+        padding: 110px 5% 110px 5%;
+        & > section { padding: 20px 0 10px 0; }
     }
 
     a {
@@ -67,10 +67,9 @@ export const Wrapper = styled.div`
                 display: none !important; 
             }    
         }
-
+        
         span {
             margin-bottom: 10px !important;
-            max-width: 640px !important;
             max-height: 364px !important;
          }
     }
