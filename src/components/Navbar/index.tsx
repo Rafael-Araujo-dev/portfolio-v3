@@ -12,8 +12,9 @@ import {
   Logo,
   NavToggle,
   NavContainer,
-  Controller,
 } from "./styles";
+
+import Controller from "./Controller";
 
 interface Properties {
   props: Array<{ name: string; link: string }>;
@@ -26,47 +27,7 @@ const Navbar: NextPage<Properties> = ({ props }) => {
 
   return (
     <Container theme={theme}>
-      <Controller theme={theme}>
-        <button
-          onClick={() => {
-            theme == "Light" ? setTheme("Dark") : setTheme("Light");
-          }}
-          tabIndex={0}
-        >
-          <Image
-            src={
-              theme == "Light"
-                ? "/components/navbar/sun-dark.svg"
-                : "/components/navbar/moon-light.svg"
-            }
-            alt={"Ícone de modo " + theme}
-            width={"20px"}
-            height={"20px"}
-            layout={"fixed"}
-          />
-          {theme}
-        </button>
-        |
-        <button
-          onClick={() => {
-            language == "PT" ? setLanguage("EN") : setLanguage("PT");
-          }}
-          tabIndex={0}
-        >
-          <Image
-            src={
-              theme == "Light"
-                ? "/components/navbar/earth-dark.svg"
-                : "/components/navbar/earth-light.svg"
-            }
-            alt={"Ícone de idioma"}
-            width={"20px"}
-            height={"20px"}
-            layout={"fixed"}
-          />
-          {language}
-        </button>
-      </Controller>
+      <Controller />
       <Desk theme={theme}>
         <Logo theme={theme} />
         <ul>
