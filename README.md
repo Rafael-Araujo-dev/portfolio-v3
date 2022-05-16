@@ -8,7 +8,10 @@
 ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 
 ![Website](https://img.shields.io/website?down_message=Offline&label=Website%20status&style=for-the-badge&up_message=Online&url=https%3A%2F%2Fwww.orafaelribeiro.com%2F)
-![screencast-localhost_3000-2022 05 15-03_00_39](https://user-images.githubusercontent.com/90640158/168459366-ec696ab0-fc6a-4975-b89c-380d0ff2b5b7.gif)
+
+![screencast-chic-malasada-60af43 netlify app-2022 05 16-18_36_05](https://user-images.githubusercontent.com/90640158/168686681-fc072a1f-54e2-4eb3-be75-18bb603842ac.gif)
+![screencast-chic-malasada-60af43 netlify app-2022 05 16-18_40_02](https://user-images.githubusercontent.com/90640158/168687165-d9218061-551b-4056-8659-6a5a054af9b9.gif)
+
 
 > Link para o site no ar: <a href="https://www.orafaelribeiro.com/">Portfolio</a>
 
@@ -18,7 +21,6 @@
 
  - <a href="https://gtmetrix.com/" target="_blank">GTmetrix</a>
 ![image](https://user-images.githubusercontent.com/90640158/168489678-1f3569a8-6d3c-4fa3-b08f-4fcd8dd932b8.png)
-
 
 
 
