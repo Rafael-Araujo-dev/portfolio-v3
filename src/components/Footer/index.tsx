@@ -6,7 +6,7 @@ import { useThemeState } from "@context/theme";
 import { Container } from "./styles";
 
 interface Properties {
-  props: Array<{ name: string; link: string }>;
+  props?: Array<{ name?: string; link?: string }>;
 }
 
 const Footer: NextPage<Properties> = ({ props }) => {
@@ -17,15 +17,20 @@ const Footer: NextPage<Properties> = ({ props }) => {
     <Container theme={theme}>
       <div>
         <span>Rafael Ribeiro de Araujo - 2022</span>
-        <ul>
-          {props.map((item: { name: string; link: string }, index: number) => {
-            return (
-              <li key={index}>
-                <a href={item.link}>{item.name}</a>
-              </li>
-            );
-          })}
-        </ul>
+
+        {props && (
+          <ul>
+            {props.map(
+              (item: { name?: string; link?: string }, index: number) => {
+                return (
+                  <li key={index}>
+                    <a href={item.link}>{item.name}</a>
+                  </li>
+                );
+              }
+            )}
+          </ul>
+        )}
       </div>
     </Container>
   );

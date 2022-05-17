@@ -7,15 +7,12 @@ import Project from "./Project";
 import { Container } from "./styles";
 
 interface Properties {
-  props: Array<{
-    thumbnail: string;
-    title: string;
-    description: string;
-    technologies: string;
-    moreAbout: {
-      text: string;
-      link: string;
-    };
+  props?: Array<{
+    thumbnail?: { photo?: string; video?: string };
+    title?: string;
+    description?: string;
+    technologies?: Array<{ name?: string; link?: string }>;
+    links?: Array<{ text?: string; link?: string }>;
   }>;
 }
 
@@ -25,9 +22,10 @@ const Projects: NextPage<Properties> = ({ props }) => {
 
   return (
     <Container theme={theme} id="projects">
-      {props.map((project, index: number) => {
-        return <Project key={index} props={project} id={index} />;
-      })}
+      {props &&
+        props.map((props, index: number) => {
+          return <Project key={index} props={props} id={index} />;
+        })}
     </Container>
   );
 };
