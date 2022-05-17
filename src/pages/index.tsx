@@ -18,14 +18,11 @@ interface Properties {
     navbar: Array<{ name: string; link: string }>;
     hero: { title: string; description: string };
     projects: Array<{
-      thumbnail: string;
+      thumbnail: { photo: string; video: string };
       title: string;
       description: string;
-      technologies: string;
-      moreAbout: {
-        text: string;
-        link: string;
-      };
+      technologies: Array<string>;
+      links: Array<{ text: string; link: string }>;
     }>;
     footer: Array<{ name: string; link: string }>;
   };
@@ -62,40 +59,20 @@ const props: Properties = {
     },
     projects: [
       {
-        thumbnail: "https://source.unsplash.com/random/1920x1080?developer",
+        thumbnail: {
+          photo: "/components/projects/sunnyside_screenshot.png",
+          video: "/components/projects/sunnyside_preview.gif",
+        },
         title: "Project Name",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        technologies:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        moreAbout: {
-          text: "See More",
-          link: "#SeeMore",
-        },
-      },
-      {
-        thumbnail: "https://source.unsplash.com/random/1920x1080?coding",
-        title: "Project Name",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        technologies:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        moreAbout: {
-          text: "See More",
-          link: "#SeeMore",
-        },
-      },
-      {
-        thumbnail: "https://source.unsplash.com/random/1920x1080?userinterface",
-        title: "Project Name",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        technologies:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        moreAbout: {
-          text: "See More",
-          link: "#SeeMore",
-        },
+        technologies: [""],
+        links: [
+          {
+            text: "",
+            link: "",
+          },
+        ],
       },
     ],
     footer: [
@@ -143,40 +120,24 @@ const props: Properties = {
     },
     projects: [
       {
-        thumbnail: "https://source.unsplash.com/random/1920x1080?developer",
-        title: "Nome do projeto",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        technologies:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        moreAbout: {
-          text: "Ver mais",
-          link: "#SeeMore",
+        thumbnail: {
+          photo: "/components/projects/sunnyside_screenshot.png",
+          video: "/components/projects/sunnyside_preview.gif",
         },
-      },
-      {
-        thumbnail: "https://source.unsplash.com/random/1920x1080?coding",
-        title: "Nome do projeto",
+        title: "Sunnyside agency",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        technologies:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        moreAbout: {
-          text: "Ver mais",
-          link: "#SeeMore",
-        },
-      },
-      {
-        thumbnail: "https://source.unsplash.com/random/1920x1080?userinterface",
-        title: "Nome do projeto",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        technologies:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        moreAbout: {
-          text: "Ver mais",
-          link: "#SeeMore",
-        },
+          "Desafio do site Frontend Mentor, onde a proposta era desenvolver uma landing page completamente responsiva, tendo como referência um design proposto.",
+        technologies: ["NextJS", "TypeScript", "NodeJS", "Styled Components"],
+        links: [
+          {
+            text: "Github",
+            link: "https://github.com/Rafael-Araujo-dev/sunnyside-agency",
+          },
+          {
+            text: "Ver site",
+            link: "https://sunnyside.orafaelribeiro.com/",
+          },
+        ],
       },
     ],
     footer: [

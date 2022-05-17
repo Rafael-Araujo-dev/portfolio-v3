@@ -69,7 +69,6 @@ export const Wrapper = styled.div`
         }
         
         span {
-            margin-bottom: 10px !important;
             max-height: 364px !important;
          }
     }
@@ -105,23 +104,34 @@ export const Description = styled.p`
     line-height: ${typography.paragraph1.lineHeight};
 `
 
-export const Technologies = styled.p`
+export const Technologies = styled.ul`
     font-family: "Inter", sans-serif;
     font-size: ${typography.paragraph2.fontSize};
     font-weight: ${typography.paragraph2.fontWeight.normal};
-    line-height: ${typography.paragraph2.lineHeight};
-
+    line-height: ${typography.captions.lineHeight};
     margin: 20px 0; 
-
+    list-style: disc;
+    p {
+        font-size: ${typography.paragraph1.fontSize};
+        font-weight: ${typography.paragraph1.fontWeight.medium};
+        line-height: 2rem;
+    }
+    li {
+        margin-left: 20px;
+    }
     @media (min-width: 768px) { margin: 40px 0 20px 0; }
 `
 
-export const MoreAbout = styled.a`
+export const Links = styled.div`
     font-family: "Inter", sans-serif;
     font-size: ${typography.paragraph1.fontSize};
     font-weight: ${typography.paragraph1.fontWeight.strong};
-    line-height: ${typography.paragraph1.lineHeight};
     text-decoration: underline;
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 10px;
 `
 
 export const Thumbnail = styled.img`

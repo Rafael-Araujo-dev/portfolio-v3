@@ -8,14 +8,11 @@ import { Container } from "./styles";
 
 interface Properties {
   props: Array<{
-    thumbnail: string;
+    thumbnail: { photo: string; video: string };
     title: string;
     description: string;
-    technologies: string;
-    moreAbout: {
-      text: string;
-      link: string;
-    };
+    technologies: Array<string>;
+    links: Array<{ text: string; link: string }>;
   }>;
 }
 

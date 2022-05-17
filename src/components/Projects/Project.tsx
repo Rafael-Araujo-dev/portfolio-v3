@@ -1,7 +1,9 @@
 import type { NextPage } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { useLanguageState } from "@context/language";
 import { useThemeState } from "@context/theme";
+import { useState } from "react";
 
 import {
   Container,
@@ -9,21 +11,18 @@ import {
   Title,
   Description,
   Technologies,
-  MoreAbout,
   Thumbnail,
   Separator,
+  Links,
 } from "./styles";
 
 interface Properties {
   props: {
-    thumbnail: string;
+    thumbnail: { photo: string; video: string };
     title: string;
     description: string;
-    technologies: string;
-    moreAbout: {
-      text: string;
-      link: string;
-    };
+    technologies: Array<string>;
+    links: Array<{ text: string; link: string }>;
   };
   id: number;
 }
@@ -31,6 +30,7 @@ interface Properties {
 const Projects: NextPage<Properties> = ({ props, id }) => {
   const [language, setLanguage] = useLanguageState();
   const [theme, setTheme] = useThemeState();
+  const [isThumbnailActive, setThumbnailActive] = useState(false);
 
   return (
     <Container theme={theme}>
@@ -41,7 +41,7 @@ const Projects: NextPage<Properties> = ({ props, id }) => {
               {id + 1 < 10 ? "0" + (id + 1) : id + 1} / {props.title}
             </Title>
             <Image
-              src={props.thumbnail}
+              src={props.thumbnail.photo}
               alt="Foto do projeto"
               width={"100%"}
               height={"100%"}
@@ -49,20 +49,40 @@ const Projects: NextPage<Properties> = ({ props, id }) => {
               quality={100}
             />
             <Description>{props.description}</Description>
-            <Technologies>{props.technologies}</Technologies>
+
+            <Technologies>
+              <p>
+                {language == "PT"
+                  ? "Tecnologias utilizadas:"
+                  : "Used Technologies"}
+              </p>
+              {props.technologies.map((tech, index) => {
+                return <li key={index}>{tech}</li>;
+              })}
+            </Technologies>
           </div>
-          <MoreAbout href={props.moreAbout.link} tabIndex={0}>
-            {props.moreAbout.text}
-          </MoreAbout>
+          <Links>
+            {props.links.map((link, index) => {
+              return (
+                <Link href={link.link} key={index}>
+                  <a target="_blank">{link.text}</a>
+                </Link>
+              );
+            })}
+          </Links>
         </div>
         <div>
           <Image
-            src={props.thumbnail}
+            src={
+              isThumbnailActive ? props.thumbnail.video : props.thumbnail.photo
+            }
             alt={"Foto do projeto " + props.title}
             width={"100%"}
             height={"100%"}
             layout={"responsive"}
             quality={100}
+            onMouseEnter={() => setThumbnailActive(true)}
+            onMouseLeave={() => setThumbnailActive(false)}
           />
         </div>
       </Wrapper>
