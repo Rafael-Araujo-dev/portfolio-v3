@@ -10,7 +10,7 @@ import "aos/dist/aos.css";
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     AOS.init({
-      offset: 200,
+      offset: 50,
       once: true,
     });
   }, []);

@@ -2,8 +2,8 @@ import styled from "styled-components";
 import colors from "@styles/colors.json";
 import typography from "@styles/typography.json";
 
-export const Container = styled.section<{theme?: string}>`
-    padding: 60px 5% 0 5%;
+export const Container = styled.section`
+padding: 60px 5% 0 5%;
     min-height: calc(100vh - 60px);
     display: flex;
     @media (min-width: 768px) {
@@ -11,6 +11,30 @@ export const Container = styled.section<{theme?: string}>`
         min-height: calc(100vh - 110px);
     }
 
+    
+    `
+
+export const Background = styled.div<{theme?: string}>`
+
+    background-size: cover;
+    position: fixed;
+    left: 0;
+    z-index:-1;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    svg {
+        width: 100%;
+        height: 100%;
+        transition-duration: .250ms;
+        transition-property: fill, stroke;
+        opacity: 0.15;
+    }
+    
+    rect, path {
+        transition-duration: .250ms;
+        transition-property: fill, stroke;
+    }
     background-color: ${props =>
         props.theme == "Light" && colors.neutral100
         ||
@@ -18,7 +42,7 @@ export const Container = styled.section<{theme?: string}>`
     };
     transition-duration: 250ms;
     transition-property: background;
-`
+    `
 
 export const Wrapper = styled.div<{theme?: string}>`
     display: flex;
@@ -28,12 +52,12 @@ export const Wrapper = styled.div<{theme?: string}>`
     max-width: 1240px;
     margin: auto;
     justify-content: space-between;
-
+    
     flex-direction: column;
     @media (min-width: 768px) {
         flex-direction: row;
     }
-
+    
     & > div {
         transition-duration: 250ms;
         transition-property: color;
@@ -46,7 +70,7 @@ export const Wrapper = styled.div<{theme?: string}>`
         line-height: ${typography.display2.lineHeight};
         flex: 1;
         text-align: center;
-        margin-bottom: 60px;
+        margin-bottom: 30px;
         color: ${props =>
             props.theme == "Light" && colors.neutral900
             ||
