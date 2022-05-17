@@ -17,145 +17,20 @@ interface Properties {
   [key: string]: {
     navbar: Array<{ name: string; link: string }>;
     hero: { title: string; description: string };
-    projects: Array<{
-      thumbnail: { photo: string; video: string };
-      title: string;
-      description: string;
-      technologies: Array<string>;
-      links: Array<{ text: string; link: string }>;
+    projects?: Array<{
+      thumbnail?: { photo?: string; video?: string };
+      title?: string;
+      description?: string;
+      technologies?: Array<{ name?: string; link?: string }>;
+      links?: Array<{ text?: string; link?: string }>;
     }>;
-    footer: Array<{ name: string; link: string }>;
+    footer?: Array<{ name?: string; link?: string }>;
   };
 }
 
-const props: Properties = {
-  EN: {
-    navbar: [
-      {
-        name: "Home",
-        link: "#home",
-      },
-      {
-        name: "Projects",
-        link: "#projects",
-      },
-      {
-        name: "About",
-        link: "#About",
-      },
-      {
-        name: "Playground",
-        link: "#Playground",
-      },
-      {
-        name: "Contact",
-        link: "#Contact",
-      },
-    ],
-    hero: {
-      title: "Hello, I'm Rafael Araujo.",
-      description:
-        "Front-End developer, student of technology, always looking for new challenges and to specialize in web development.",
-    },
-    projects: [
-      {
-        thumbnail: {
-          photo: "/components/projects/sunnyside_screenshot.png",
-          video: "/components/projects/sunnyside_preview.gif",
-        },
-        title: "Project Name",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        technologies: [""],
-        links: [
-          {
-            text: "",
-            link: "",
-          },
-        ],
-      },
-    ],
-    footer: [
-      {
-        name: "Projects",
-        link: "#projects",
-      },
-      {
-        name: "LinkedIn",
-        link: "https://www.linkedin.com/in/rafael-ribeiro-araujo/",
-      },
-      {
-        name: "Curriculum",
-        link: "#Curriculum",
-      },
-    ],
-  },
-  PT: {
-    navbar: [
-      {
-        name: "Home",
-        link: "#home",
-      },
-      {
-        name: "Projetos",
-        link: "#projects",
-      },
-      {
-        name: "Sobre",
-        link: "#About",
-      },
-      {
-        name: "Playground",
-        link: "#Playground",
-      },
-      {
-        name: "Contato",
-        link: "#Contact",
-      },
-    ],
-    hero: {
-      title: "Olá, eu sou Rafael Araujo.",
-      description:
-        "Desenvolvedor Front-End, estudante de tecnologia, sempre buscando novos desafios e especializar-se em desenvolvimento web.",
-    },
-    projects: [
-      {
-        thumbnail: {
-          photo: "/components/projects/sunnyside_screenshot.png",
-          video: "/components/projects/sunnyside_preview.gif",
-        },
-        title: "Sunnyside agency",
-        description:
-          "Desafio do site Frontend Mentor, onde a proposta era desenvolver uma landing page completamente responsiva, tendo como referência um design proposto.",
-        technologies: ["NextJS", "TypeScript", "NodeJS", "Styled Components"],
-        links: [
-          {
-            text: "Github",
-            link: "https://github.com/Rafael-Araujo-dev/sunnyside-agency",
-          },
-          {
-            text: "Ver site",
-            link: "https://sunnyside.orafaelribeiro.com/",
-          },
-        ],
-      },
-    ],
-    footer: [
-      {
-        name: "Projetos",
-        link: "#projects",
-      },
-      {
-        name: "LinkedIn",
-        link: "https://www.linkedin.com/in/rafael-ribeiro-araujo/",
-      },
-      {
-        name: "Curriculum",
-        link: "#Curriculum",
-      },
-    ],
-  },
-};
+import data from "./data.json";
+
+const props: Properties = data;
 
 const Home: NextPage = () => {
   const [language, setLanguage] = useLanguageState();
@@ -188,3 +63,7 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+// Footer -> OKAY
+// Projects ->
+// Hero ->

@@ -108,7 +108,7 @@ export const Technologies = styled.ul`
     font-family: "Inter", sans-serif;
     font-size: ${typography.paragraph2.fontSize};
     font-weight: ${typography.paragraph2.fontWeight.normal};
-    line-height: ${typography.captions.lineHeight};
+    line-height: 1.7rem;
     margin: 20px 0; 
     list-style: disc;
     p {
@@ -117,9 +117,13 @@ export const Technologies = styled.ul`
         line-height: 2rem;
     }
     li {
-        margin-left: 20px;
+        margin-left: 30px;
+        a:hover {
+            text-decoration: underline;
+        }
     }
     @media (min-width: 768px) { margin: 40px 0 20px 0; }
+
 `
 
 export const Links = styled.div`
