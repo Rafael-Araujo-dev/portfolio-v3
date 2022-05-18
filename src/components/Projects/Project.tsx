@@ -56,6 +56,7 @@ const Projects: NextPage<Properties> = ({ props, id }) => {
                     height={"100%"}
                     layout={"responsive"}
                     quality={100}
+                    unoptimized={true}
                     onMouseEnter={() => setThumbnailActive(true)}
                     onMouseLeave={() => setThumbnailActive(false)}
                   />
@@ -112,6 +113,7 @@ const Projects: NextPage<Properties> = ({ props, id }) => {
                   height={"100%"}
                   layout={"responsive"}
                   quality={100}
+                  unoptimized={true}
                   onMouseEnter={() => setThumbnailActive(true)}
                   onMouseLeave={() => setThumbnailActive(false)}
                 />
