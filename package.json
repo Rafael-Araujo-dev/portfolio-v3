@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "yarn build && yarn export -o _static"
+    "export": "npm run build && npm export -o _static"
   },
   "dependencies": {
     "@types/aos": "^3.0.4",
